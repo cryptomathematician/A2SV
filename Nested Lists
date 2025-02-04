@@ -1,0 +1,14 @@
+if __name__ == '__main__':
+    nested_list = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        nested_list.append([name, score])
+        
+    result = sorted(set([score for name,score in nested_list]))
+    max_score = result[1]
+    name_highestScore = [name for name,score in nested_list if score == max_score]
+    result= sorted(name_highestScore)
+    final_result = [ print(name) for name in result]
+    final_result
+    
